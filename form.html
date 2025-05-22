@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Language Detector</title>
+</head>
+<body>
+    <h2>Определение языка программирования</h2>
+    <form action="/predict_html" method="post">
+        <textarea name="code" rows="10" cols="80" placeholder="Вставьте ваш код здесь...">{{ code or '' }}</textarea><br><br>
+        <input type="submit" value="Определить язык">
+    </form>
+
+    {% if result %}
+        <h3>Предсказанный язык: <span style="color:green">{{ result }}</span></h3>
+    {% endif %}
+</body>
+</html>
